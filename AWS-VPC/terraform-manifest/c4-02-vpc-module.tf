@@ -1,5 +1,5 @@
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws//examples/complete"
+  source  = "terraform-aws-modules/vpc/aws"
   version = "5.15.0"
   
   name = var.vpc_name
@@ -22,19 +22,19 @@ module "vpc" {
   enable_dns_support   = true
 
   public_subnet_tags = {
-    Type = Public-subnet
+    Type = "Public-subnet"
   }
 
   private_subnet_tags = {
-    Type = Private-subnet
+    Type = "Private-subnet"
   }
 
   database_subnet_tags = {
-    Type = database-subnet
+    Type = "database-subnet"
   }
   tags = local.common_tags
   vpc_tags = {
-    Name = VPC-DEV
+    Name = "VPC-DEV"
   }
 }
 
