@@ -14,7 +14,7 @@ module "vpc" {
   database_subnets    = var.vpc_database_subnets
 
   private_subnet_names = ["Private Subnet One", "Private Subnet Two"]
-  
+  public_subnet_names = ["Public Subnet One", "Public Subnet Two"]
   enable_nat_gateway = var.vpc_enable_nat_gateway
   single_nat_gateway =  var.vpc_single_nat_gateway
   

@@ -6,12 +6,12 @@ terraform {
     }
     null = {
       source = "hashicorp/null"
-      version = "3.2.3"
+      version = "~> 3.0"
     }
   }
 }
 
 provider "aws" {
-#   region =
+  region = var.aws_region
 }
 

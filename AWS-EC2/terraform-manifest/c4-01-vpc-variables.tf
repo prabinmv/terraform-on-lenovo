@@ -1,7 +1,7 @@
 variable "vpc_name" {
     description = "VPC Name"
     type = string
-    default = "vpc-terraform"
+    default = "My-VPC"
 }
 
 variable "vpc_cidr_block" {
