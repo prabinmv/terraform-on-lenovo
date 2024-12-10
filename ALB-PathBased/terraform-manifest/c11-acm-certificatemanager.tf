@@ -13,9 +13,7 @@ module "acm" {
 
   wait_for_validation = true
 
-  tags = {
-    Name = local.common_tags
-  }
+  tags = local.common_tags
 }
 
 output "acm_ceertoficate_arn" {

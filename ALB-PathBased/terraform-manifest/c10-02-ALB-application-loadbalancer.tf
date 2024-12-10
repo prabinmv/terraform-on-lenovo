@@ -177,6 +177,6 @@ resource "aws_lb_target_group_attachment" "mytg2" {
   port             = 80
 }
 
-output "zz_ec2_private" {
-  value = {for ec2_instance, details in  module.ec2_private: ec2_instance => details}
-}
+# output "zz_ec2_private" {
+#   value = {for ec2_instance, details in  module.ec2_private: ec2_instance => details}
+# }
