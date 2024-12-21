@@ -52,7 +52,7 @@ module "alb" {
 
           conditions = [{
              http_header = {
-              http_header_name = "custom header"
+              http_header_name = "custom-header"
               values           = ["app-1", "app1", "my-app-1"]
             }
           }]
@@ -76,7 +76,7 @@ module "alb" {
 
           conditions = [{
             http_header = {
-              http_header_name = "custom header"
+              http_header_name = "custom-header"
               values           = ["app-2", "app2", "my-app-2"]
             }
           }]
@@ -88,7 +88,7 @@ module "alb" {
           actions = [{
             type        = "redirect"
             status_code = "HTTP_302"
-            host        = "cloud9aws.in"
+            host        = "stacksimplify.com"
             path        = "/aws-eks/"
             query       = ""
             protocol    = "HTTPS"
@@ -107,7 +107,7 @@ module "alb" {
           actions = [{
             type        = "redirect"
             status_code = "HTTP_302"
-            host        = "cloud9aws.in"
+            host        = "stacksimplify.com"
             path        = "/azure-aks/azure-kubernetes-service-introduction/"
             query       = ""
             protocol    = "HTTPS"
