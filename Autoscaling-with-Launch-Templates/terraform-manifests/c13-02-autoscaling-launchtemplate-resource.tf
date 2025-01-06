@@ -1,7 +1,7 @@
 resource "aws_launch_template" "my_launch_template" {
   name = "my_launch_template"
   description = "My_Launch_Template"
-  image_id = data.aws_ami.amzlinux2
+  image_id = data.aws_ami.amzlinux2.id
   instance_type = var.instance_type
   vpc_security_group_ids = [module.private_sg.security_group_id]
   key_name = var.instance_keypair
@@ -15,7 +15,7 @@ resource "aws_launch_template" "my_launch_template" {
     ebs {
       volume_size = 10
       delete_on_termination = true
-      volume_type = gp2
+      # volume_type = gp3
     }
   }
 

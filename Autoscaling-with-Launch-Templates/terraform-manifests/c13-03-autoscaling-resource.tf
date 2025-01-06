@@ -1,4 +1,4 @@
-resource "aws_autoscaling_group" "myasg" {
+resource "aws_autoscaling_group" "my_asg" {
   name                      = "myasg"
   max_size                  = 3
   min_size                  = 2
