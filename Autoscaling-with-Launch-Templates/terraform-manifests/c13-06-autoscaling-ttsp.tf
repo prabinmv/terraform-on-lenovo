@@ -1,6 +1,6 @@
 resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_50" {
   name                   = "avg-cpu-policy-greater-than-80"
-  autoscaling_group_name = aws_autoscaling_group.my_asg.id
+  autoscaling_group_name = aws_autoscaling_group.my_asg.name
   estimated_instance_warmup = 120
   policy_type = "TargetTrackingScaling"
 
@@ -9,7 +9,7 @@ resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_50" {
       predefined_metric_type = "ASGAverageCPUUtilization"
     }
 
-    target_value = 90.0
+    target_value = 70
   }
 }
 
