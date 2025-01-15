@@ -9,7 +9,7 @@ resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_50" {
       predefined_metric_type = "ASGAverageCPUUtilization"
     }
 
-    target_value = 70
+    target_value = 80
   }
 }
 
