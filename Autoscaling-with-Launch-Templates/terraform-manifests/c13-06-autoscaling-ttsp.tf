@@ -13,6 +13,15 @@ resource "aws_autoscaling_policy" "avg_cpu_policy_greater_than_50" {
   }
 }
 
+# resource "aws_autoscaling_policy" "bat" {
+#   name                   = "foobar3-terraform-test"
+#   scaling_adjustment     = 4
+#   adjustment_type        = "ChangeInCapacity"
+#   cooldown               = 300
+#   autoscaling_group_name = aws_autoscaling_group.my_asg.name
+# }
+
+
 # resource "aws_autoscaling_policy" "alb_target_request_greater_than_yy" {
 #   name                   = "alb-target-request-greater-than-yy"
 #   autoscaling_group_name = aws_autoscaling_group.my_asg.id
