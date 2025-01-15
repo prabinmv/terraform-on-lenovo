@@ -26,7 +26,9 @@ resource "aws_launch_template" "my_launch_template" {
   tag_specifications {
     resource_type = "instance"
 
-    tags = local.common_tags
+    tags = {
+      Name = "myasg"
+    }
   }
 
   
