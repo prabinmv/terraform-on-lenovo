@@ -35,7 +35,7 @@ module "alb" {
         status_code  = "200"
       }
 
-      rueles = {
+      rules = {
         myapp1-rule = {
           actions = [{
             type = "weighted-forward"
