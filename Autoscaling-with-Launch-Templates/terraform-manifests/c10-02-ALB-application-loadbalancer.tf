@@ -72,20 +72,20 @@ module "alb" {
       deregistration_delay              = 10
       load_balancing_cross_zone_enabled = false
 
-      target_group_health = {
-        dns_failover = {
-          minimum_healthy_targets_count = 2
-        }
-        unhealthy_state_routing = {
-          minimum_healthy_targets_percentage = 50
-        }
-      }
+      # target_group_health = {
+      #   dns_failover = {
+      #     minimum_healthy_targets_count = 2
+      #   }
+      #   unhealthy_state_routing = {
+      #     minimum_healthy_targets_percentage = 50
+      #   }
+      # }
 
       health_check = {
         enabled             = true
         interval            = 30
-        # path                = "/app1/index.html"
-        path                = "/"
+        path                = "/app1/index.html"
+        # path                = "/"
         port                = "traffic-port"
         healthy_threshold   = 3
         unhealthy_threshold = 3

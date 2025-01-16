@@ -1,7 +1,6 @@
 module "alb" {
   source  = "terraform-aws-modules/alb/aws"
   version = "9.12.0"
-
   enable_deletion_protection = false
 
   name    = "${local.name}-alb"
