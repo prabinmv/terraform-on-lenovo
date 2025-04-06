@@ -8,7 +8,7 @@ module "acm" {
   validation_method = "DNS"
 
   subject_alternative_names = [
-    "*.cloud9aws.in"
+    "*.kloudoc8s.in"
   ]
 
   wait_for_validation = true

@@ -1,5 +1,5 @@
 data "aws_route53_zone" "mydoamin" {
-  name         = "cloud9aws.in"
+  name         = "kloudoc8s.in"
 #   private_zone = true
 }
 
