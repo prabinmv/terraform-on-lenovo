@@ -6,7 +6,7 @@ module "public_bastion_sg" {
   description = "Security group ssh port open for all"
   vpc_id = module.vpc.vpc_id
   ingress_cidr_blocks = ["0.0.0.0/0"]
-  ingress_rules = ["ssh-tcp"]
+  ingress_rules = ["ssh-tcp", "http-80-tcp"]
   egress_rules = ["all-all"]
   tags = local.common_tags
 }
