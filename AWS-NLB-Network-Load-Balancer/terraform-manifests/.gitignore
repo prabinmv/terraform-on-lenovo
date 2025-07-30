@@ -1,1 +1,2 @@
-terraform-key.pem
+private-key
+local-exec-output-files
