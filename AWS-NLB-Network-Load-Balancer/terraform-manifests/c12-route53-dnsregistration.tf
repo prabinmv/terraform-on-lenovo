@@ -1,0 +1,11 @@
+resource "aws_route53_record" "apps_dns" {
+  zone_id = data.aws_route53_zone.mydoamin.zone_id
+  name    = "nlb.kloudoc8s.in"
+  type    = "A"
+  # ttl     = 300
+  alias {
+    name                   = module.nlb.dns_name
+    zone_id                = module.nlb.zone_id
+    evaluate_target_health = true
+  }
+}
